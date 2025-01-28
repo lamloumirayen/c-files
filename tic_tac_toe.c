@@ -122,7 +122,6 @@ void playerMove()
 }
 void computerMove()
 {
-   //creates a seed based on current time
    srand(time(0));
    int x;
    int y;
@@ -144,7 +143,6 @@ void computerMove()
 }
 char checkWinner()
 {
-   //check rows
    for(int i = 0; i < 3; i++)
    {
       if(board[i][0] == board[i][1] && board[i][0] == board[i][2])
@@ -152,7 +150,6 @@ char checkWinner()
          return board[i][0];
       }
    }
-   //check columns
    for(int i = 0; i < 3; i++)
    {
       if(board[0][i] == board[1][i] && board[0][i] == board[2][i])
@@ -160,7 +157,6 @@ char checkWinner()
          return board[0][i];
       }
    }
-   //check diagonals
    if(board[0][0] == board[1][1] && board[0][0] == board[2][2])
    {
       return board[0][0];
